@@ -53,7 +53,6 @@ void thread_data_destroy(struct thread_data* data) {
 
 void Sprava_serialize(const struct Plocha *plocha, char *output) {
     int i;
-   // printf("som v sprava serialize");
     snprintf(output, 1024, "\n");
     for (i = 0; i < (plocha->sirka * 2) - 1; i++) {
         snprintf(output + strlen(output), 1024 - strlen(output), "-");
@@ -76,8 +75,6 @@ void Sprava_serialize(const struct Plocha *plocha, char *output) {
     for (i = 0; i < (plocha->sirka * 2) - 1; i++) {
         snprintf(output + strlen(output), 1024 - strlen(output), "-");
     }
-    //printf("koncim serialize");
-
 }
 
 void tryVypisPlochu(const struct Plocha *plocha, char *output) {
