@@ -78,7 +78,6 @@ void Sprava_serialize(const struct Plocha *plocha, char *output) {
 }
 
 void tryVypisPlochu(const struct Plocha *plocha, char *output) {
-    //printf("SOM V TRY VYPIS PLOCHU");
     Sprava_serialize(plocha, output);
 }
 
@@ -172,7 +171,6 @@ int main(int argc, char *argv[]) {
     pthread_t th_listen;
     THREAD_DATA data;
     thread_data_init(&data,7, newsockfd);
-    //active_socket_init(&my_socket);
 
     pthread_create(&th_listen, NULL, process_client_data, &data);
     pthread_join(th_listen, NULL);
