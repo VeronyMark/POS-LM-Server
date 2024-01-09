@@ -132,10 +132,7 @@ void* consume(void* thread_data) {
     char outputBuffer[1024];
     tryVypisPlochu(&data->s.plocha, outputBuffer);
 
-    //const char* msg = "I got your message";
     write(data->port, outputBuffer, strlen(outputBuffer));
-
-
 }
 
 
